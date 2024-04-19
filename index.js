@@ -52,6 +52,8 @@ function renderGame() {
     } else if (sum === 21) {
         message = "Blackjack!"
         hasBlackJack = true
+        player.chips += 50; // Add $50 to chips when blackjack is hit
+        playerEl.textContent = player.name + ": $" + player.chips;
     } else {
         message = "Sorry, you lose this round!"
         isAlive = false
